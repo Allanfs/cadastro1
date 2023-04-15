@@ -1,5 +1,6 @@
 <?php include_once"config.php";?>
 <?php
+
 $nome = $_POST['nome'];
 $cnpj = $_POST['cnpj'];
 $inscestadual = $_POST['inscestadual'];
@@ -15,9 +16,7 @@ $estado = $_POST['estado'];
 $celular = $_POST['celular'];
 $email = $_POST['email'];
 $obs = $_POST['obs'];
-
 $sql = "INSERT INTO tbclientes(nome,cnpj,inscestadual,responsavel,cpf,rg,endereco,num,numcomp,bairro,cidade,estado,celular,email,obs)VALUES('$nome','$cnpj','$inscestadual','$responsavel','$cpf','$rg','$endereco','$num','$numcomp','$bairro','$cidade','$estado','$celular','$email','$obs')";
-
 if (mysqli_query($conn, $sql)){
 	header("Location: addtbc.php");
 }else{
