@@ -1,6 +1,6 @@
 <?php include_once"config.php";?>
 <?php
-
+$id = $_POST['id'];
 $nome = $_POST['nome'];
 $cnpj = $_POST['cnpj'];
 $inscestadual = $_POST['inscestadual'];
@@ -16,9 +16,10 @@ $estado = $_POST['estado'];
 $celular = $_POST['celular'];
 $email = $_POST['email'];
 $obs = $_POST['obs'];
-$sql = "INSERT INTO tbclientes(nome,cnpj,inscestadual,responsavel,cpf,rg,endereco,num,numcomp,bairro,cidade,estado,celular,email,obs)VALUES('$nome','$cnpj','$inscestadual','$responsavel','$cpf','$rg','$endereco','$num','$numcomp','$bairro','$cidade','$estado','$celular','$email','$obs')";
+$sql = "UPDATE tbclientes SET nome='$nome',cnpj='$cnpj',inscestadual='$inscestadual',responsavel='$responsavel',cpf='$cpf',rg='$rg',endereco='$endereco',num='$num',numcomp='$numcomp',bairro='$bairro',cidade='$cidade',estado='$estado',celular='$celular',email='$email',obs='$obs' WHERE id='$id'";
+
 if (mysqli_query($conn, $sql)){
-	header("Location: addtbc.php");
+	header("Location: editar.php?id=$id");
 }else{
 	echo "Deu erro" . $sql . "<br>" . mysqli_error($conn);
 }

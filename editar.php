@@ -46,7 +46,7 @@ $obs = $linha['obs'];
 		<label>CNPJ</label>
 		<input type="text" name="cnpj" maxlength="15"value="<?php echo $cnpj;?>">
 		<label>Inscrição Estadual</label>
-		<input type="text" name="inscestadual" maxlength="15" value="<?php echo $inscestadual;?>">
+		<input type="text" name="inscestadual" maxlength="15" value=" <?php echo $inscestadual;?>">
 		<label>Responsável</label>
 		<input type="text" name="responsavel" maxlength="50" value="<?php echo $responsavel;?>">
 		<label>CPF</label>
