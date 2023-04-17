@@ -42,7 +42,7 @@ $obs = $linha['obs'];
 	<form method="post" name="Cliente" action="atualizar.php">
 		<label>Nome</label>
 		<input type="text" name="nome" maxlength="150" value="<?php echo $nome;?>">
-		<input type="text" hidden="id" maxlength="150" value="<?php echo $id;?>">
+		<input type="hidden" name="id" maxlength="150" value="<?php echo $id;?>">
 		<label>CNPJ</label>
 		<input type="text" name="cnpj" maxlength="15"value="<?php echo $cnpj;?>">
 		<label>Inscrição Estadual</label>
